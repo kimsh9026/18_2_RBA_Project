@@ -14,7 +14,7 @@ path = './data'
 util_path = './data/utilization/'
 
 #chrawling
-for month in range(10, 11):
+for month in range(10, 12):
     if month == 10 :
         for day in range (10, 28):
             new_folder_name = util_path + str(month) + '_' + str(day)
