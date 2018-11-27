@@ -16,7 +16,7 @@ util_path = './data/utilization/'
 #chrawling
 for month in range(10, 12):
     if month == 10 :
-        for day in range (10, 28):
+        for day in range (10, 32):
             new_folder_name = util_path + str(month) + '_' + str(day)
             make_folder(new_folder_name)
             for hour in range(0, 24) :
