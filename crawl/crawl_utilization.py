@@ -46,14 +46,61 @@ for month in range(10, 12):
                                 print("Was a nice sleep, now let me continue...")
                                 continue
                         soup = BeautifulSoup(source,'html.parser')
+                        
                         top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(1) > div > div > ul > li > a > span")
-                        new_file_name = new_folder_name + '/' + str(hour) +'.txt'
+                        new_file_name = new_folder_name + '/all_' + str(hour) +'.txt'
                         # 새로운 파일 생성
                         new_file = open(new_file_name, 'w')
                         # 새로 생긴 파일에 crawled data를 입력한다.
                         for top in top_list:
                             new_file.write(top.text)
                             new_file.write('\n')
+
+                        top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(2) > div > div > ul > li > a > span")
+                        new_file_name = new_folder_name + '/10_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
+                        new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
+                        for top in top_list:
+                            new_file.write(top.text)
+                            new_file.write('\n')
+
+                        top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(3) > div > div > ul > li > a > span")
+                        new_file_name = new_folder_name + '/20_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
+                        new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
+                        for top in top_list:
+                            new_file.write(top.text)
+                            new_file.write('\n')
+
+                        top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(4) > div > div > ul > li > a > span")
+                        new_file_name = new_folder_name + '/30_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
+                        new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
+                        for top in top_list:
+                            new_file.write(top.text)
+                            new_file.write('\n')
+
+                        top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(5) > div > div > ul > li > a > span")
+                        new_file_name = new_folder_name + '/40_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
+                        new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
+                        for top in top_list:
+                            new_file.write(top.text)
+                            new_file.write('\n')
+
+                        top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(6) > div > div > ul > li > a > span")
+                        new_file_name = new_folder_name + '/50_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
+                        new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
+                        for top in top_list:
+                            new_file.write(top.text)
+                            new_file.write('\n')
+
                     else:
                         page = ''
                         while page == '':
@@ -74,12 +121,61 @@ for month in range(10, 12):
                                 print("Was a nice sleep, now let me continue...")
                                 continue
                         soup = BeautifulSoup(source,'html.parser')
+
                         top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(1) > div > div > ul > li > a > span")
-                        new_file_name = new_folder_name + '/' + str(hour) +'.txt'
+                        new_file_name = new_folder_name + '/all_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
                         new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
                         for top in top_list:
                             new_file.write(top.text)
                             new_file.write('\n')
+
+                        top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(2) > div > div > ul > li > a > span")
+                        new_file_name = new_folder_name + '/10_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
+                        new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
+                        for top in top_list:
+                            new_file.write(top.text)
+                            new_file.write('\n')
+
+                        top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(3) > div > div > ul > li > a > span")
+                        new_file_name = new_folder_name + '/20_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
+                        new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
+                        for top in top_list:
+                            new_file.write(top.text)
+                            new_file.write('\n')
+
+                        top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(4) > div > div > ul > li > a > span")
+                        new_file_name = new_folder_name + '/30_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
+                        new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
+                        for top in top_list:
+                            new_file.write(top.text)
+                            new_file.write('\n')
+
+                        top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(5) > div > div > ul > li > a > span")
+                        new_file_name = new_folder_name + '/40_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
+                        new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
+                        for top in top_list:
+                            new_file.write(top.text)
+                            new_file.write('\n')
+
+                        top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(6) > div > div > ul > li > a > span")
+                        new_file_name = new_folder_name + '/50_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
+                        new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
+                        for top in top_list:
+                            new_file.write(top.text)
+                            new_file.write('\n')
+
                 else:
                     if hour < 10:
                         page = ''
@@ -103,8 +199,54 @@ for month in range(10, 12):
                                 print("Was a nice sleep, now let me continue...")
                                 continue
                         soup = BeautifulSoup(source,'html.parser')
+                        
                         top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(1) > div > div > ul > li > a > span")
-                        new_file_name = new_folder_name + '/' + str(hour) +'.txt'
+                        new_file_name = new_folder_name + '/all_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
+                        new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
+                        for top in top_list:
+                            new_file.write(top.text)
+                            new_file.write('\n')
+
+                        top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(2) > div > div > ul > li > a > span")
+                        new_file_name = new_folder_name + '/10_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
+                        new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
+                        for top in top_list:
+                            new_file.write(top.text)
+                            new_file.write('\n')
+
+                        top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(3) > div > div > ul > li > a > span")
+                        new_file_name = new_folder_name + '/20_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
+                        new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
+                        for top in top_list:
+                            new_file.write(top.text)
+                            new_file.write('\n')
+
+                        top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(4) > div > div > ul > li > a > span")
+                        new_file_name = new_folder_name + '/30_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
+                        new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
+                        for top in top_list:
+                            new_file.write(top.text)
+                            new_file.write('\n')
+
+                        top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(5) > div > div > ul > li > a > span")
+                        new_file_name = new_folder_name + '/40_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
+                        new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
+                        for top in top_list:
+                            new_file.write(top.text)
+                            new_file.write('\n')
+
+                        top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(6) > div > div > ul > li > a > span")
+                        new_file_name = new_folder_name + '/50_' + str(hour) +'.txt'
                         # 새로운 파일 생성
                         new_file = open(new_file_name, 'w')
                         # 새로 생긴 파일에 crawled data를 입력한다.
@@ -131,9 +273,57 @@ for month in range(10, 12):
                                 print("Was a nice sleep, now let me continue...")
                                 continue
                         soup = BeautifulSoup(source,'html.parser')
+
                         top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(1) > div > div > ul > li > a > span")
-                        new_file_name = new_folder_name + '/' + str(hour) +'.txt'
+                        new_file_name = new_folder_name + '/all_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
                         new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
+                        for top in top_list:
+                            new_file.write(top.text)
+                            new_file.write('\n')
+
+                        top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(2) > div > div > ul > li > a > span")
+                        new_file_name = new_folder_name + '/10_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
+                        new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
+                        for top in top_list:
+                            new_file.write(top.text)
+                            new_file.write('\n')
+
+                        top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(3) > div > div > ul > li > a > span")
+                        new_file_name = new_folder_name + '/20_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
+                        new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
+                        for top in top_list:
+                            new_file.write(top.text)
+                            new_file.write('\n')
+
+                        top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(4) > div > div > ul > li > a > span")
+                        new_file_name = new_folder_name + '/30_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
+                        new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
+                        for top in top_list:
+                            new_file.write(top.text)
+                            new_file.write('\n')
+
+                        top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(5) > div > div > ul > li > a > span")
+                        new_file_name = new_folder_name + '/40_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
+                        new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
+                        for top in top_list:
+                            new_file.write(top.text)
+                            new_file.write('\n')
+
+                        top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(6) > div > div > ul > li > a > span")
+                        new_file_name = new_folder_name + '/50_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
+                        new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
                         for top in top_list:
                             new_file.write(top.text)
                             new_file.write('\n')
@@ -171,14 +361,61 @@ for month in range(10, 12):
                                 print("Was a nice sleep, now let me continue...")
                                 continue
                         soup = BeautifulSoup(source,'html.parser')
+
                         top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(1) > div > div > ul > li > a > span")
-                        new_file_name = new_folder_name + '/' + str(hour) +'.txt'
+                        new_file_name = new_folder_name + '/all_' + str(hour) +'.txt'
                         # 새로운 파일 생성
                         new_file = open(new_file_name, 'w')
                         # 새로 생긴 파일에 crawled data를 입력한다.
                         for top in top_list:
                             new_file.write(top.text)
                             new_file.write('\n')
+
+                        top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(2) > div > div > ul > li > a > span")
+                        new_file_name = new_folder_name + '/10_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
+                        new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
+                        for top in top_list:
+                            new_file.write(top.text)
+                            new_file.write('\n')
+
+                        top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(3) > div > div > ul > li > a > span")
+                        new_file_name = new_folder_name + '/20_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
+                        new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
+                        for top in top_list:
+                            new_file.write(top.text)
+                            new_file.write('\n')
+
+                        top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(4) > div > div > ul > li > a > span")
+                        new_file_name = new_folder_name + '/30_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
+                        new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
+                        for top in top_list:
+                            new_file.write(top.text)
+                            new_file.write('\n')
+
+                        top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(5) > div > div > ul > li > a > span")
+                        new_file_name = new_folder_name + '/40_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
+                        new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
+                        for top in top_list:
+                            new_file.write(top.text)
+                            new_file.write('\n')
+
+                        top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(6) > div > div > ul > li > a > span")
+                        new_file_name = new_folder_name + '/50_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
+                        new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
+                        for top in top_list:
+                            new_file.write(top.text)
+                            new_file.write('\n')
+
                     else:
                         page = ''
                         while page == '':
@@ -199,12 +436,61 @@ for month in range(10, 12):
                                 print("Was a nice sleep, now let me continue...")
                                 continue
                         soup = BeautifulSoup(source,'html.parser')
+
                         top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(1) > div > div > ul > li > a > span")
-                        new_file_name = new_folder_name + '/' + str(hour) +'.txt'
+                        new_file_name = new_folder_name + '/all_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
                         new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
                         for top in top_list:
                             new_file.write(top.text)
                             new_file.write('\n')
+
+                        top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(2) > div > div > ul > li > a > span")
+                        new_file_name = new_folder_name + '/10_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
+                        new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
+                        for top in top_list:
+                            new_file.write(top.text)
+                            new_file.write('\n')
+
+                        top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(3) > div > div > ul > li > a > span")
+                        new_file_name = new_folder_name + '/20_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
+                        new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
+                        for top in top_list:
+                            new_file.write(top.text)
+                            new_file.write('\n')
+
+                        top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(4) > div > div > ul > li > a > span")
+                        new_file_name = new_folder_name + '/30_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
+                        new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
+                        for top in top_list:
+                            new_file.write(top.text)
+                            new_file.write('\n')
+
+                        top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(5) > div > div > ul > li > a > span")
+                        new_file_name = new_folder_name + '/40_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
+                        new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
+                        for top in top_list:
+                            new_file.write(top.text)
+                            new_file.write('\n')
+
+                        top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(6) > div > div > ul > li > a > span")
+                        new_file_name = new_folder_name + '/50_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
+                        new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
+                        for top in top_list:
+                            new_file.write(top.text)
+                            new_file.write('\n')
+                            
                 else:
                     if hour < 10:
                         page = ''
@@ -228,8 +514,54 @@ for month in range(10, 12):
                                 print("Was a nice sleep, now let me continue...")
                                 continue
                         soup = BeautifulSoup(source,'html.parser')
+
                         top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(1) > div > div > ul > li > a > span")
-                        new_file_name = new_folder_name + '/' + str(hour) +'.txt'
+                        new_file_name = new_folder_name + '/all_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
+                        new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
+                        for top in top_list:
+                            new_file.write(top.text)
+                            new_file.write('\n')
+
+                        top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(2) > div > div > ul > li > a > span")
+                        new_file_name = new_folder_name + '/10_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
+                        new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
+                        for top in top_list:
+                            new_file.write(top.text)
+                            new_file.write('\n')
+
+                        top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(3) > div > div > ul > li > a > span")
+                        new_file_name = new_folder_name + '/20_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
+                        new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
+                        for top in top_list:
+                            new_file.write(top.text)
+                            new_file.write('\n')
+
+                        top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(4) > div > div > ul > li > a > span")
+                        new_file_name = new_folder_name + '/30_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
+                        new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
+                        for top in top_list:
+                            new_file.write(top.text)
+                            new_file.write('\n')
+
+                        top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(5) > div > div > ul > li > a > span")
+                        new_file_name = new_folder_name + '/40_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
+                        new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
+                        for top in top_list:
+                            new_file.write(top.text)
+                            new_file.write('\n')
+
+                        top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(6) > div > div > ul > li > a > span")
+                        new_file_name = new_folder_name + '/50_' + str(hour) +'.txt'
                         # 새로운 파일 생성
                         new_file = open(new_file_name, 'w')
                         # 새로 생긴 파일에 crawled data를 입력한다.
@@ -256,9 +588,57 @@ for month in range(10, 12):
                                 print("Was a nice sleep, now let me continue...")
                                 continue
                         soup = BeautifulSoup(source,'html.parser')
+
                         top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(1) > div > div > ul > li > a > span")
-                        new_file_name = new_folder_name + '/' + str(hour) +'.txt'
+                        new_file_name = new_folder_name + '/all_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
                         new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
+                        for top in top_list:
+                            new_file.write(top.text)
+                            new_file.write('\n')
+
+                        top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(2) > div > div > ul > li > a > span")
+                        new_file_name = new_folder_name + '/10_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
+                        new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
+                        for top in top_list:
+                            new_file.write(top.text)
+                            new_file.write('\n')
+
+                        top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(3) > div > div > ul > li > a > span")
+                        new_file_name = new_folder_name + '/20_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
+                        new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
+                        for top in top_list:
+                            new_file.write(top.text)
+                            new_file.write('\n')
+
+                        top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(4) > div > div > ul > li > a > span")
+                        new_file_name = new_folder_name + '/30_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
+                        new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
+                        for top in top_list:
+                            new_file.write(top.text)
+                            new_file.write('\n')
+
+                        top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(5) > div > div > ul > li > a > span")
+                        new_file_name = new_folder_name + '/40_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
+                        new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
+                        for top in top_list:
+                            new_file.write(top.text)
+                            new_file.write('\n')
+
+                        top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(6) > div > div > ul > li > a > span")
+                        new_file_name = new_folder_name + '/50_' + str(hour) +'.txt'
+                        # 새로운 파일 생성
+                        new_file = open(new_file_name, 'w')
+                        # 새로 생긴 파일에 crawled data를 입력한다.
                         for top in top_list:
                             new_file.write(top.text)
                             new_file.write('\n')
