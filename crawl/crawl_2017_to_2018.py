@@ -48,7 +48,7 @@ for year in range(2017, 2019):
                         continue
                 soup = BeautifulSoup(source,'html.parser')
                 top_list = soup.select("#content > div > div.keyword_carousel > div > div.section_lst_area.carousel_area > div.keyword_rank.select_date > div > div > ul > li > a > span")
-                new_file = open(new_file_name, 'w')
+                new_file = open(new_file_name, 'a+')
                 for top in top_list:
                     new_file.write(top.text)
                     new_file.write('\n')
@@ -80,7 +80,7 @@ for year in range(2017, 2019):
                         continue
                 soup = BeautifulSoup(source,'html.parser')
                 top_list = soup.select("#content > div > div.keyword_carousel > div > div.section_lst_area.carousel_area > div.keyword_rank.select_date > div > div > ul > li > a > span")
-                new_file = open(new_file_name, 'w')
+                new_file = open(new_file_name, 'a+')
                 for top in top_list:
                     new_file.write(top.text)
                     new_file.write('\n')
@@ -112,7 +112,7 @@ for year in range(2017, 2019):
                         continue
             soup = BeautifulSoup(source,'html.parser')
             top_list = soup.select("#content > div > div.keyword_carousel > div > div.section_lst_area.carousel_area > div.keyword_rank.select_date > div > div > ul > li > a > span")
-            new_file = open(new_file_name, 'w')
+            new_file = open(new_file_name, 'a+')
             for top in top_list:
                 new_file.write(top.text)
                 new_file.write('\n')
@@ -144,7 +144,7 @@ for year in range(2017, 2019):
                         continue
                 soup = BeautifulSoup(source,'html.parser')
                 top_list = soup.select("#content > div > div.keyword_carousel > div > div.section_lst_area.carousel_area > div.keyword_rank.select_date > div > div > ul > li > a > span")
-                new_file = open(new_file_name, 'w')
+                new_file = open(new_file_name, 'a+')
                 for top in top_list:
                     new_file.write(top.text)
                     new_file.write('\n')
@@ -168,7 +168,7 @@ for year in range(2017, 2019):
                             continue
                     soup = BeautifulSoup(source,'html.parser')
                     top_list = soup.select("#content > div > div.keyword_carousel > div > div.section_lst_area.carousel_area > div.keyword_rank.select_date > div > div > ul > li > a > span")
-                    new_file = open(new_file_name, 'w')
+                    new_file = open(new_file_name, 'a+')
                     for top in top_list:
                         new_file.write(top.text)
                         new_file.write('\n')
@@ -190,7 +190,7 @@ for year in range(2017, 2019):
                             continue
                     soup = BeautifulSoup(source,'html.parser')
                     top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(1) > div > div > ul > li > a > span")
-                    new_file = open(new_file_name, 'w')
+                    new_file = open(new_file_name, 'a+')
                     for top in top_list:
                         new_file.write(top.text)
                         new_file.write('\n')
@@ -219,7 +219,7 @@ for year in range(2017, 2019):
                         continue
                 soup = BeautifulSoup(source,'html.parser')
                 top_list = soup.select("#content > div > div.keyword_carousel > div > div > div:nth-of-type(1) > div > div > ul > li > a > span")
-                new_file = open(new_file_name, 'w')
+                new_file = open(new_file_name, 'a+')
                 for top in top_list:
                     new_file.write(top.text)
                     new_file.write('\n')
@@ -236,7 +236,7 @@ for year in range(2017, 2019):
 # source = req.text
 # soup = BeautifulSoup(source,'html.parser')
 # top_list = soup.select("#content > div > div.keyword_carousel > div > div.section_lst_area.carousel_area > div.keyword_rank.select_date > div > div > ul > li > a > span")
-# new_file = open(new_file_name, 'w')
+# new_file = open(new_file_name, 'a+')
 # for top in top_list:
 #     new_file.write(top.text)
 #     new_file.write('\n')
