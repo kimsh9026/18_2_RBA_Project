@@ -48,7 +48,10 @@ require(devtools)
 library(wordcloud2)
 View(df_wordcount_whole_keyword)
 
-wordcloud2(data = df_wordcount_whole_keyword, figPath = "./Project/R_Project/naver.png", color="green", backgroundColor="white")
+wordcloud2(data = df_wordcount_whole_keyword, figPath = "./Project/R_Project/naver.png", color= c("#3de52d"), backgroundColor="white")
+
+View(df_wordcount_seperated_keyword)
+wordcloud2(data = df_wordcount_seperated_keyword, figPath = "./Project/R_Project/Naver_1.png", color="#3de52d", backgroundColor="white")
 
 
 set.seed(9999)
