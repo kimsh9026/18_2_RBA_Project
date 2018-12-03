@@ -9,11 +9,6 @@ def make_folder(folder_name) :
         os.mkdir(folder_name)
 
 new_file_name = './data/all_rank.txt'
-#2017년 3월 29일부터 2018년 10월 9일까지..
-#2018 10월 10일부터 2018 11월 27일까지!
-
-#18/ 2
-#18/ 10 11
 
 #URL = 'https://datalab.naver.com/keyword/realtimeList.naver?datetime=' + str(year) + '-' + str(month) + '-' + str(day) + 'T20:00:00'
 ##content > div > div.keyword_carousel > div > div.section_lst_area.carousel_area > div.keyword_rank.select_date > div > div > ul > li > a > span
