@@ -15,91 +15,62 @@ library(stringr)
 library(ggplot2)
 useSejongDic()
 getwd()
-txt <- readLines("./Project/R_Project/crawl/data/all_rank.txt", encoding = "EUC-KR")
-#띄어쓰기를 지움
-actual_keyword <- str_replace_all(txt, " ", "")
 
-#띄어쓰기를 뉴라인캐릭터로 바꾼 버전을 로드함
+txt <- readLines("./Project/R_Project/crawl/data/all_rank.txt", encoding = "EUC-KR")
 word_by_word <- readLines("./Project/R_Project/crawl/data/all_rank_without_blank.txt")
-View(word_by_word)
+teen <- readLines("././Project/R_Project/crawl/data/teen.txt")
+twenty <- readLines("././Project/R_Project/crawl/data/twenty.txt")
+thirty <- readLines("././Project/R_Project/crawl/data/thirty.txt")
+fourty <- readLines("././Project/R_Project/crawl/data/fourty.txt")
+fifty <- readLines("././Project/R_Project/crawl/data/fifty.txt")
+
+actual_keyword <- str_replace_all(txt, " ", "")
+teen <- str_replace_all(teen, " ", "")
+twenty <- str_replace_all(twenty, " ", "")
+thirty <- str_replace_all(thirty, " ", "")
+fourty <- str_replace_all(fourty, " ", "")
+fifty <- str_replace_all(fifty, " ", "")
 
 wordcount_whole_keyword <- table(unlist(actual_keyword))
 wordcount_seperated_keyword <- table(unlist(word_by_word))
-
-View(wordcount_whole_keyword)
-View(wordcount_seperated_keyword)
+wordcount_teen_keyword <- table(unlist(teen))
+wordcount_twenty_keyword <- table(unlist(twenty))
+wordcount_thirty_keyword <- table(unlist(thirty))
+wordcount_fourty_keyword <- table(unlist(fourty))
+wordcount_fifty_keyword <- table(unlist(fifty))
 
 df_wordcount_whole_keyword <- as.data.frame(wordcount_whole_keyword, stringsAsFactors = F)
 df_wordcount_seperated_keyword <- as.data.frame(wordcount_seperated_keyword, stringsAsFactors = F)
+df_wordcount_teen_keyword <- as.data.frame(wordcount_teen_keyword, stringsAsFactors = F)
+df_wordcount_twenty_keyword <- as.data.frame(wordcount_twenty_keyword, stringsAsFactors = F)
+df_wordcount_thirty_keyword <- as.data.frame(wordcount_thirty_keyword, stringsAsFactors = F)
+df_wordcount_fourty_keyword <- as.data.frame(wordcount_fourty_keyword, stringsAsFactors = F)
+df_wordcount_fifty_keyword <- as.data.frame(wordcount_fifty_keyword, stringsAsFactors = F)
 
-View(df_wordcount_whole_keyword)
-View(df_wordcount_seperated_keyword)
-
-df_wordcount_whole_keyword <- df_wordcount_whole_keyword %>% arrange(desc(Freq))
+df_wordcount_whole_keyword <- df_wordcount_whole_keyword %>%  arrange(desc(Freq))
 df_wordcount_seperated_keyword <- df_wordcount_seperated_keyword %>% arrange(desc(Freq))
+df_wordcount_teen_keyword <- df_wordcount_teen_keyword %>% arrange(desc(Freq))
+df_wordcount_twenty_keyword <- df_wordcount_twenty_keyword %>% arrange(desc(Freq))
+df_wordcount_thirty_keyword <- df_wordcount_thirty_keyword %>% arrange(desc(Freq))
+df_wordcount_fourty_keyword <- df_wordcount_fourty_keyword %>% arrange(desc(Freq))
+df_wordcount_fifty_keyword <- df_wordcount_fifty_keyword %>% arrange(desc(Freq))
 
-df_wordcount_whole_keyword <- rename(df_wordcount_whole_keyword, word=Var1, freq=Freq) #변수이름 바꿔주고
 View(df_wordcount_whole_keyword)
-df_wordcount_seperated_keyword <- rename(df_wordcount_seperated_keyword, word=Var1, freq=Freq) #변수이름 바꿔주고
 View(df_wordcount_seperated_keyword)
-View(df_wordcount_whole_keyword)
+View(df_wordcount_teen_keyword)
+View(df_wordcount_twenty_keyword)
+View(df_wordcount_thirty_keyword)
+View(df_wordcount_fourty_keyword)
+View(df_wordcount_fifty_keyword)
 
 require(devtools)
 library(wordcloud2)
-View(df_wordcount_whole_keyword)
 
 wordcloud2(data = df_wordcount_whole_keyword, figPath = "./Project/R_Project/naver.png", color= c("#3de52d"), backgroundColor="white")
-
-View(df_wordcount_seperated_keyword)
 wordcloud2(data = df_wordcount_seperated_keyword, figPath = "./Project/R_Project/Naver_1.png", color="#3de52d", backgroundColor="white")
 
-
-set.seed(9999)
-wordcloud(
-  words = df_wordcount_whole_keyword$word,
-  freq = df_wordcount_whole_keyword$freq,
-  min.freq = 2,
-  max.words = 500, #표현단어수 200개까지
-  random.order = F, #고빈도단어 중앙 배치
-  rot.per = 0.35, # 회전단어 비율
-  colors = brewer.pal(8, "Dark2"), #단어색깔.....,
-  family="AppleGothic"
-)
-
-set.seed(9999)
-wordcloud(
-  words = df_wordcount_seperated_keyword$word,
-  freq = df_wordcount_seperated_keyword$freq,
-  min.freq = 2,
-  max.words = 500, #표현단어수 200개까지
-  random.order = F, #고빈도단어 중앙 배치
-  rot.per = 0.35, # 회전단어 비율
-  colors = brewer.pal(8, "Dark2"), #단어색깔.....,
-  family="AppleGothic"
-)
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-require(devtools)
-#install_github("lchiffon/wordcloud2")
-library(wordcloud2)
-
-wordcloud2(data = txt_df, color="random-light", backgroundColor="black")
-wordcloud2(data = txt_df, minRotation = -pi/6, maxRotation = -pi/6, minSize = 10, rotateRatio = 1)
-wordcloud2(data = txt_df, color="random-light", shape = 'star')
-wordcloud2(data = txt_df, figPath = "twitter.png", size=1.5, color = "skyblue")
+wordcloud2(data = df_wordcount_teen_keyword, figPath = "./Project/R_Project/teen.png", color=rep_len(c("#ede574", "#f9d423","#fc913a","#ff4e50"), nrow(df_wordcount_teen_keyword)), backgroundColor="black")
+wordcloud2(data = df_wordcount_twenty_keyword, figPath = "./Project/R_Project/twenty.png", color=rep_len(c("#285943", "#77AF9C","#8CD790","#519D9E"), nrow(df_wordcount_twenty_keyword)), backgroundColor="black")
+wordcloud2(data = df_wordcount_thirty_keyword, figPath = "./Project/R_Project/thirty.png", color=rep_len(c("#00dffc", "#008c9e","#005f6b","#aacfd0"), nrow(df_wordcount_thirty_keyword)), backgroundColor="black")
+wordcloud2(data = df_wordcount_fourty_keyword, figPath = "./Project/R_Project/fourty.png", color=rep_len(c("#f6ea8c", "#f26d5b","#c03546","#492540"), nrow(df_wordcount_fourty_keyword)), backgroundColor="black")
+wordcloud2(data = df_wordcount_fifty_keyword, figPath = "./Project/R_Project/fifty.png", color=rep_len(c("#D499B9", "#9055A2","#2E294E","#011638"), nrow(df_wordcount_fifty_keyword)), backgroundColor="white")
